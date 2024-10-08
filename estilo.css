@@ -1,223 +1,235 @@
-/* Estilos generales */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/*Barra de navegacion*/
+.navbar{
+    padding: 0rem;
+    background-color: #f5f6f7;
 }
-body {
-    font-family: 'PT Sans', sans-serif;
-    margin: 0;
-    padding: 0;
-    /*background-color: #11468F;*/
-    background-image: url(img/fondo10.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-}
-/* estilos de barra menu*/
-.nav{
-    font-size:larger;
-    position: fixed;
-    width: 100%;
-    height: 70px;
-    display: flex;
+.navbar-collapse{
     align-items: center;
     justify-content: space-between;
-    padding: 25px;
-    transition: all 0.5s ease;
-    z-index: 2;
 }
-.nav.active{
-    background: #041562;
-    padding: 15px;
-}
-
-.nav.active a{
-    color: #fff;
-}
-.nav.active a:hover{
-    background: #fff;
-    color: #000;
-}
-.logo img {
-    width: 90px; /* Puedes ajustar el tamaño según tus necesidades */
-    height: auto; /* Esto mantendrá la proporción original de la imagen */
-
-}
-.menu{
+/*Estilos generales*/
+section{
     display: flex;
-    
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-.menu li{
-    list-style: none;
-    margin: 10px;
-    margin-right: 100px;
+h1{
+    font-size: 2.5rem;
+    font-family: 'Rubik Dirt', cursive;
 }
-.menu li a{
-    color:#fff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: all 0.5s ease;
+.seccion-oscura{
+    color: white;
+    background-color: #132551;
 }
-.menu li a:hover{
-    padding: 5px 10px;
-    background-color: #fff;
-    color: #000;
-    border-radius: 15px;
+.seccion-titulo{
+    font-size: 2rem;
+    padding: 15px 0;
+    font-family: 'Rubik Dirt', cursive;
 }
-.scrol{
-    height: 100px;
+.seccion-texto{
+    font-size: 1.2rem;
 }
-/* Estilo para el dropdown */
-.dropdown {
-    display: none;
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 300px; /* Ancho del dropdown, ajusta según tus necesidades */
+.seccion-clara{
+    color: black;
     background-color: white;
-    border-left: 1px solid #ccc;
-    box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.2);
-    z-index: 999;
-  }
-  
-  /* Estilo para los elementos del dropdown */
-  .dropdown-content {
-    padding: 20px;
-  }
-  
-  /* Estilo para los enlaces dentro del dropdown */
-  .dropdown-content a {
-    display: block;
-    margin-bottom: 10px;
-    text-decoration: none;
-    color: #333;
-  }
-  
-  /* Estilo para el botón de cerrar el dropdown */
-  .close-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-  }
-  
-/* Estilos para el slider */
-.container{
-    position: relative;
-    z-index: 1;
-
 }
-.container .wrapper{
-    width: 80%;
+.texto-negro{
+    color: black;
+}
+texto-blanco{
+    color: white;
+}
+.seccion-descripcion{
+    font-size: 1.2rem;
+    color: #584e4e;
+}
+.boton-info{
+    font-size: 1.1rem;
+    margin: 20px;
+}
+/*Hero*/
+.hero{
+    background-color: #f5f6f7;
+    min-height: 450px;
+    text-align: center;
+}
+.hero-principal{
+    padding: 3rem;
+}
+.hero-imagen-yo{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 20px;
+}
+.hero-principal h2{
+    font-size: 1.5rem;
+    color: #615151;
+}
+/*Sobre mi*/
+.sobre-mi{
+    padding:10px;
     height: 500px;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);
-    margin: 5rem auto;
-    overflow: hidden;
 }
-.container .wrapper-holder{
-    display: grid;
-    grid-template-columns: repeat(4, 100%);
-    height: 100%;
-    width: 100%;
-    animation: slider 30s ease-in-out infinite alternate;
+.sobre-mi .contenedor{
+    max-width: 600px;
+    text-align: center;   
 }
-/* imagenes para el slider*/
-.container #slider-img-1{
-    background-image: url(img/slider1.jpg);
-    background-position: center;
-}
-.container #slider-img-2{
-    background-image: url(img/slider2.jpg);
-    background-position: center;
-}
-.container #slider-img-3{
-    background-image: url(img/slider3.jpg);
-    background-position: center;
-}
-.container #slider-img-4{
-    background-image: url(img/slider4.jpg);
-    background-position: center;
-}
-/* botones del slider */
-.container .button-holder .button{
-    background-color: #fff;
-    width: 15px;
-    height: 15px;
-    border-radius: 15px;
-    display: inline-block;
-    margin: .3rem;
-}
-.container .button-holder{
-    position: absolute;
-    left: 45%;
-    bottom: 0%;
-}
-.button:hover{
-    box-shadow: 0px 0px 7px 4px rgba(0, 255, 255, 0.6);
-}
-@keyframes slider{
-    0%{transform: translate(0%);}
-    10%{transform: translate(-100%);}
-    20%{transform: translate(-100%);}
-    30%{transform: translate(-200%);}
-    40%{transform: translate(-200%);}
-    50%{transform: translate(-200%);}
-    60%{transform: translate(-300%);}
-    70%{transform: translate(-300%);}
-    80%{transform: translate(-300%);}
-    90%{transform: translate(0%);}
-    100%{transform: translate(0%);}
-}
-/*estilos para About*/
-.about{
-    width: 100%;
-    padding: 20px;
-    padding-top: 10px;
-    text-align: center;
-}
-.about .img img {
-    width: 300px; /* Ajusta el tamaño del logotipo según tus preferencias */
-    display: block; /* Hace que la imagen sea un bloque para centrar verticalmente */
-    margin: 0 auto; /* Centra la imagen verticalmente y horizontalmente */
-}
-.about .me{
-    text-align: center;
-    background-size: cover;
-    color:aliceblue;
-}
-.about .dat span{
+/*Experiencia*/
+-titulo{
+    font-size: 25px;
     font-weight: bold;
+    margin: 10px 0;
 }
-.about .dat{
+ i{
+    font-size: 2.5rem;
+    color: #c10b14;
+    background-color: #132551;
+    padding: 8px 19px;
+    border-radius: 50%;
+}
+.badges-contenedor{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+.badge{
+    margin: 5px;
+}
+ .columna{
+    padding: 20px;
+    border: 2px solid #8080804d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: all 0.2s ease-in;
+}
+ .columna:hover{
+    color: white;
+    background-color: #1b1b32;
+}
+/*Slider*/
+.slider-imagen{
+    max-width: 100%; 
+    max-height: 100%; 
+    width: 960px; 
+    height: 540px; 
+    object-fit: cover; 
+    border-radius: 10px;  
+}
+/*Contacto*/
+.contacto .container{
+    max-width: 1100px;
+    min-height: 200px;
+    padding: 20px;
+}
+.contacto .rectangulo{
+    margin-top: -5rem;
+    background-color: #132551;
+    border-radius: 10px;
+    box-shadow: 0px 1px 4px 1px white;
+}
+.contacto .row{
     width: 100%;
-    max-width: 1200px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap:50px;
-    padding: 45px 0px;
-    text-align: center;
-    color:white;
+    display: flex;
+    align-items: center;
 }
-/* Estilos para el footer */
-footer {
-    background-color: #041562;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
+.contacto .descripcion{
+    color: white;
+    font-size: 1.2rem;
 }
-
-.redes-sociales {
-    margin-bottom: 10px;
+.contacto button{
+    color: white;
+    font-weight: bold;
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 1.25em 2em;
+    margin: 10px;
+    border-radius: 100px;
+    transition: all 0.2s ease-in-out;
 }
-
-.redes-sociales a {
-    margin: 0 10px;
+.contacto button i{
+    color: white;
+    font-size: 1.3rem;
+    transition: all 0.2s ease-in-out;
 }
-
-/* Estilos para los iconos de redes sociales */
-.redes-sociales img {
-    width: 30px;
-    height: 30px;
+.contacto button:hover{
+    background-color: white;
+    color: black;
+}
+.contacto button:hover i{
+    color:black
+}
+/*Footer*/
+footer{
+    min-height: 200px;
+}
+.footer-icono{
+    height: 80px;
+    width: 80px;
+    margin: 10px;
+}
+.footer-texto{
+    font-size: 1.5rem;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+.iconos-redes a{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    margin: 10px;
+    border: 2px solid white;
+    border-radius: 50%;
+    transition: all 0.2s ease-in;
+}
+.iconos-redes i{
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.2s ease-in;
+}
+.iconos-redes a:hover{
+    background-color: white;
+    border: 2px solid #132551;
+}
+.iconos-redes a:hover i{
+    color: black;
+}
+.derechos-autor{
+    font-size: 15px;
+    color: #aeaeae;
+    padding: 20px;
+}
+/*Responsivo*/
+@media screen and (max-width: 767px){
+    .navbar-brand{
+        display: none;
+    }
+}
+@media screen and (min-width: 700px){
+    .hero-inferior-imagen{
+        max-width: 600px;
+    }
+}
+@media screen and (min-width: 400px) {
+    .overlay p{
+        font-size: 18px;
+    }
+    .overlay i{
+        font-size: 40px;
+    }
+}
+@media screen and (max-width: 800px) {
+    .testimonio-imagen{
+        height: 120px;
+        width: 120px;
+    }
+    .testimonio-texto{
+        font-size: 18px;
+    }
 }
